@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Report Login</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="background-container_welcome">
+      <div class="background-image-1_welcome">
+        <header class="logo-welcome">
+          <img src="./IMAGES/mahindra-rise.png" alt="logo" />
+        </header>
+        <div class="box-container">
+          <div class="text-head" style="width: 440px">
+            <h4>Welcome to</h4>
+            <h3>
+              <img src="./IMAGES/Welcome-to-mahindra.svg" alt="Welcome" />
+            </h3>          </div>
+          <div class="login-container" style="height: 360px">
+            <form id="login-form">
+              <div class="form-group">
+                <label for="username" style="margin-bottom:7px;">Username</label>
+                <input type="text" id="username" name="username" required />
+              </div>
+              <div class="form-group-2">
+                <div>
+                  <label for="password">Password</label>
+                </div>
+                <div class="hide-icon" id="toggle-password">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 17"
+                    fill="none"
+                  >
+                    <path
+                      d="M17.8822 1.38134L17.1463 0.645393C16.9383 0.437403 16.5543 0.469412 16.3143 0.757357L13.7541 3.30132C12.602 2.80538 11.3382 2.56538 10.0101 2.56538C6.05798 2.58132 2.6342 4.88529 0.986083 8.19749C0.890056 8.40549 0.890056 8.66142 0.986083 8.8374C1.75402 10.4054 2.90609 11.7015 4.34609 12.6774L2.2501 14.8054C2.0101 15.0454 1.97809 15.4293 2.13813 15.6374L2.87408 16.3733C3.08207 16.5813 3.46606 16.5493 3.70606 16.2613L17.754 2.21345C18.058 1.97358 18.09 1.58962 17.882 1.38161L17.8822 1.38134ZM10.8581 6.21322C10.5861 6.1492 10.2981 6.06925 10.0261 6.06925C8.66606 6.06925 7.57818 7.15727 7.57818 8.51718C7.57818 8.78919 7.64219 9.07714 7.72215 9.34916L6.65003 10.4052C6.33008 9.84524 6.15409 9.22114 6.15409 8.51722C6.15409 6.38924 7.86611 4.67722 9.99409 4.67722C10.6982 4.67722 11.3221 4.8532 11.8821 5.17316L10.8581 6.21322Z"
+                      fill="#666666"
+                      fill-opacity="0.8"
+                    />
+                    <path
+                      d="M19.0342 8.19743C18.4742 7.07738 17.7381 6.06945 16.8262 5.25342L13.8502 8.19743V8.51738C13.8502 10.6454 12.1382 12.3574 10.0102 12.3574H9.69023L7.80225 14.2454C8.50631 14.3893 9.24225 14.4854 9.96225 14.4854C13.9144 14.4854 17.3382 12.1814 18.9863 8.85325C19.1302 8.62918 19.1302 8.40527 19.0342 8.19726L19.0342 8.19743Z"
+                      fill="#666666"
+                      fill-opacity="0.8"
+                    />
+                  </svg>
+                  <h4>Hide</h4>
+                </div>
+              </div>
+              <input type="password" id="password" name="password" required />
+              <div class="form-group-3 rememberIcons" style="margin-bottom: 20px">
+                <input
+                  type="checkbox"
+                  id="remember-password"
+                  style="width: 24px; height: 24px"
+                />
+                <label for="remember-password" style="color:#333;">Remember Password </label>
+              </div>
+
+              <button type="submit" id="loginButtonreport">Login</button>
+              <div class="register-link">
+                Don't have an account?
+                <a href="./register.html">Register Now</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="background-image-2_welcome">
+        <div class="trending">
+          <h2>
+            Trending @
+            <img
+              src="./IMAGES/mahindra.svg"
+              alt="mahindra"
+              style="margin-left: 12px"
+            />
+          </h2>
+          <div id="image">
+            <img src="./IMAGES/TryMagicExpand.png" alt="Thar" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document
+        .getElementById("toggle-password")
+        .addEventListener("click", function () {
+          const passwordInput = document.getElementById("password");
+          const hideIcon = document.querySelector(".hide-icon svg");
+          const hideText = document.querySelector(".hide-icon h4");
+          if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            hideText.innerText = "Hide";
+            hideIcon.innerHTML =
+              '<path fill="#666666" fill-opacity="0.8" d="M17.8822 1.38134L17.1463 0.645393C16.9383 0.437403 16.5543 0.469412 16.3143 0.757357L13.7541 3.30132C12.602 2.80538 11.3382 2.56538 10.0101 2.56538C6.05798 2.58132 2.6342 4.88529 0.986083 8.19749C0.890056 8.40549 0.890056 8.66142 0.986083 8.8374C1.75402 10.4054 2.90609 11.7015 4.34609 12.6774L2.2501 14.8054C2.0101 15.0454 1.97809 15.4293 2.13813 15.6374L2.87408 16.3733C3.08207 16.5813 3.46606 16.5493 3.70606 16.2613L17.754 2.21345C18.058 1.97358 18.09 1.58962 17.882 1.38161L17.8822 1.38134ZM10.8581 6.21322C10.5861 6.1492 10.2981 6.06925 10.0261 6.06925C8.66606 6.06925 7.57818 7.15727 7.57818 8.51718C7.57818 8.78919 7.64219 9.07714 7.72215 9.34916L6.65003 10.4052C6.33008 9.84524 6.15409 9.22114 6.15409 8.51722C6.15409 6.38924 7.86611 4.67722 9.99409 4.67722C10.6982 4.67722 11.3221 4.8532 11.8821 5.17316L10.8581 6.21322Z" /><path fill="#666666" fill-opacity="0.8" d="M19.0342 8.19743C18.4742 7.07738 17.7381 6.06945 16.8262 5.25342L13.8502 8.19743V8.51738C13.8502 10.6454 12.1382 12.3574 10.0102 12.3574H9.69023L7.80225 14.2454C8.50631 14.3893 9.24225 14.4854 9.96225 14.4854C13.9144 14.4854 17.3382 12.1814 18.9863 8.85325C19.1302 8.62918 19.1302 8.40527 19.0342 8.19726L19.0342 8.19743Z" /></svg>';
+          } else {
+            passwordInput.type = "password";
+            hideText.innerText = "Show";
+            hideIcon.innerHTML = `<svg
+         xmlns="http://www.w3.org/2000/svg"
+         width="20"
+         height="20"
+         viewBox="0 0 20 17"
+         fill="none"
+       >
+         <path
+           d="M17.8822 1.38134L17.1463 0.645393C16.9383 0.437403 16.5543 0.469412 16.3143 0.757357L13.7541 3.30132C12.602 2.80538 11.3382 2.56538 10.0101 2.56538C6.05798 2.58132 2.6342 4.88529 0.986083 8.19749C0.890056 8.40549 0.890056 8.66142 0.986083 8.8374C1.75402 10.4054 2.90609 11.7015 4.34609 12.6774L2.2501 14.8054C2.0101 15.0454 1.97809 15.4293 2.13813 15.6374L2.87408 16.3733C3.08207 16.5813 3.46606 16.5493 3.70606 16.2613L17.754 2.21345C18.058 1.97358 18.09 1.58962 17.882 1.38161L17.8822 1.38134ZM10.8581 6.21322C10.5861 6.1492 10.2981 6.06925 10.0261 6.06925C8.66606 6.06925 7.57818 7.15727 7.57818 8.51718C7.57818 8.78919 7.64219 9.07714 7.72215 9.34916L6.65003 10.4052C6.33008 9.84524 6.15409 9.22114 6.15409 8.51722C6.15409 6.38924 7.86611 4.67722 9.99409 4.67722C10.6982 4.67722 11.3221 4.8532 11.8821 5.17316L10.8581 6.21322Z"
+           fill="#666666"
+           fill-opacity="0.8"
+         />
+         <path
+           d="M19.0342 8.19743C18.4742 7.07738 17.7381 6.06945 16.8262 5.25342L13.8502 8.19743V8.51738C13.8502 10.6454 12.1382 12.3574 10.0102 12.3574H9.69023L7.80225 14.2454C8.50631 14.3893 9.24225 14.4854 9.96225 14.4854C13.9144 14.4854 17.3382 12.1814 18.9863 8.85325C19.1302 8.62918 19.1302 8.40527 19.0342 8.19726L19.0342 8.19743Z"
+           fill="#666666"
+           fill-opacity="0.8"
+         />
+      </svg>`;
+          }
+        });
+
+      document
+        .getElementById("loginButtonreport")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+          window.location.href = "reports.html";
+        });
+    </script>
+  </body>
+</html>
