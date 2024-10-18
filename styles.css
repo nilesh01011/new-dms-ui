@@ -29,6 +29,10 @@
   position: relative;
 }
 
+input {
+  padding-left: 10px;
+}
+
 .logo {
   display: flex;
   flex-direction: column;
@@ -268,7 +272,7 @@ h2 {
 }
 
 #image {
-  margin-top: 46px;
+  margin-top: 44px;
 }
 
 #image img {
